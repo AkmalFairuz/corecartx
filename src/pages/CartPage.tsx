@@ -15,8 +15,10 @@ import {
 } from "@chakra-ui/react";
 import { FaMinus, FaPlus, FaTrash } from "react-icons/fa";
 import { FaBagShopping } from "react-icons/fa6";
+import { useNavigate } from "react-router";
 
 const CartPage = () => {
+    const navigate = useNavigate();
     return (
         <>
             <Box h={"30px"} />
@@ -69,7 +71,7 @@ const CartPage = () => {
                         <Heading size={"3xl"}>{formatRupiah(100000)}</Heading>
                     </Flex>
                     <Box flex={"auto"} />
-                    <Button size={"xl"}>
+                    <Button size={"xl"} onClick={() => navigate("/checkout")}>
                         <FaBagShopping />
                         Proceed to Checkout
                     </Button>

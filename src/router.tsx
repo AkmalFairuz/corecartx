@@ -1,6 +1,7 @@
 import AuthLayout from "@/layouts/AuthLayout.tsx";
 import MainLayout from "@/layouts/MainLayout.tsx";
 import CartPage from "@/pages/CartPage.tsx";
+import CheckoutPage from "@/pages/CheckoutPage.tsx";
 import HomePage from "@/pages/HomePage.tsx";
 import LoginPage from "@/pages/LoginPage.tsx";
 import ProductPage from "@/pages/ProductPage.tsx";
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             {
                 path: "/shipment-tracking",
                 element: <ShipmentTrackingPage />,
+            },
+            {
+                path: "/checkout",
+                element: <CheckoutPage />,
             },
         ],
     },

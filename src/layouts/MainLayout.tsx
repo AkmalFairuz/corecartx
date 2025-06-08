@@ -7,7 +7,7 @@ const MainLayout = () => {
         <>
             <Navbar />
             <Flex w={"full"} justify={"center"} px={3}>
-                <Box maxW={"1100px"} w={"full"}>
+                <Box maxW={"1100px"} w={"full"} mb={"10px"}>
                     <Outlet />
                 </Box>
             </Flex>
