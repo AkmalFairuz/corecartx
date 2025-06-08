@@ -16,14 +16,19 @@ const ProductPreview = ({ title }: { title: string }) => {
             userSelect={"none"}
             onClick={() => navigate("/product/1")}
         >
-            <Image
-                src={"https://picsum.photos/300/300"}
-                aspectRatio={1}
-                maxW={"150px"}
-            ></Image>
+            <Card.Title>
+                <Image
+                    src={
+                        "https://m.media-amazon.com/images/I/51CxntPwYkL._AC_SX466_.jpg"
+                    }
+                    aspectRatio={1}
+                ></Image>
+            </Card.Title>
             <Card.Body px={2} py={1}>
                 <Text>{title}</Text>
-                <Text fontWeight={"bold"}>Rp100.000</Text>
+                <Text fontWeight={"bold"} fontSize={"lg"}>
+                    Rp100.000
+                </Text>
                 <HStack fontSize={"sm"} color={"gray.400"} py={0.5} gap={1}>
                     <Text color={"yellow.600"}>
                         <FaStar />
