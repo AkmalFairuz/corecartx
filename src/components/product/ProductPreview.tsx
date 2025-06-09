@@ -2,8 +2,10 @@ import { Card, HStack, Image, Text } from "@chakra-ui/react";
 import { BsDot } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
 import { useNavigate } from "react-router";
+import formatRupiah from "@/utils/formatRupiah.ts";
+import type { Product } from "@/models/Product.ts";
 
-const ProductPreview = ({ title }: { title: string }) => {
+const ProductPreview = ({ product }: { product: Product }) => {
     const navigate = useNavigate();
     return (
         <Card.Root
@@ -19,23 +21,23 @@ const ProductPreview = ({ title }: { title: string }) => {
             <Card.Title>
                 <Image
                     src={
-                        "https://m.media-amazon.com/images/I/51CxntPwYkL._AC_SX466_.jpg"
+                        product.imageUrl
                     }
                     aspectRatio={1}
                 ></Image>
             </Card.Title>
             <Card.Body px={2} py={1}>
-                <Text>{title}</Text>
+                <Text>{product.name}</Text>
                 <Text fontWeight={"bold"} fontSize={"lg"}>
-                    Rp100.000
+                    {formatRupiah(product.price)}
                 </Text>
                 <HStack fontSize={"sm"} color={"gray.400"} py={0.5} gap={1}>
                     <Text color={"yellow.600"}>
                         <FaStar />
                     </Text>
-                    <Text>4.5</Text>
+                    <Text>{product.rating}</Text>
                     <BsDot />
-                    <Text> 100+ sold</Text>
+                    <Text> {product.sold}+ sold</Text>
                 </HStack>
             </Card.Body>
         </Card.Root>

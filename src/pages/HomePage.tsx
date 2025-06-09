@@ -2,6 +2,7 @@ import ProductPreview from "@/components/product/ProductPreview.tsx";
 import { Box, Center, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import { FaChevronRight } from "react-icons/fa";
 import Slider from "react-slick";
+import { dummyProducts } from "@/models/Product.ts";
 
 const HomePage = () => {
     return (
@@ -29,15 +30,15 @@ const ProductGroup1 = () => {
 
             <SimpleGrid
                 gap={3}
-                columns={{ base: 1, sm: 2, lg: 3, xl: 4 }}
+                columns={{ base: 2, sm: 3, lg: 4, xl: 5 }}
                 overflowX={"auto"}
             >
-                {Array.from({ length: 10 }, (_, index) => (
+                {dummyProducts.map((p, i) =>
                     <ProductPreview
-                        key={index}
-                        title={`Intel Core CPU Latest #${index + 1}`}
+                        key={i}
+                        product={p}
                     />
-                ))}
+                )}
             </SimpleGrid>
         </>
     );

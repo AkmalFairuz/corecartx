@@ -18,6 +18,7 @@ import {
     FaUser,
 } from "react-icons/fa";
 import { FaDisplay } from "react-icons/fa6";
+import timothyPng from "@/assets/timothy.png";
 
 const ProfilePage = () => {
     return (
@@ -56,11 +57,11 @@ const ProfilePage = () => {
                     </Heading>
                     <Field.Root>
                         <Field.Label>Full Name</Field.Label>
-                        <Input value={"John Doe"} />
+                        <Input value={"Timothy Ronald"} />
                     </Field.Root>
                     <Field.Root mt={2}>
                         <Field.Label>Email Address</Field.Label>
-                        <Input value={"johndoe@gmail.com"} />
+                        <Input value={"timothy.crypto@gmail.com"} />
                     </Field.Root>
                     <Field.Root mt={2}>
                         <Field.Label>Phone Number</Field.Label>
@@ -78,7 +79,7 @@ const ProfilePage = () => {
                     <Image
                         p={3}
                         src={
-                            "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQnPHNgBYL10NwHTWLkDmUV_QuLYwHqkfEPcwzp1mKbZHlwqwFxx3XuWu-V2lLdzRkPGNksFV-EEWEkS3laC2aZ9KWqY6knuAfDMIZz9ck5"
+                            timothyPng
                         }
                         rounded={"full"}
                         aspectRatio={1}
