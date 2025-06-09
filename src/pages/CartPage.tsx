@@ -56,6 +56,7 @@ const CartPage = () => {
                 p={4}
             >
                 <Flex
+                    direction={{base: "column", md: "row"}}
                     w={"full"}
                     maxW={"1000px"}
                     bg={"black"}
@@ -64,14 +65,15 @@ const CartPage = () => {
                     px={4}
                     py={3}
                     rounded={"lg"}
-                    align={"center"}
+                    gap={{base: 2, md: 0}}
+                    align={{base: "start", md: "center"}}
                 >
                     <Flex direction={"column"}>
                         <Text>Total:</Text>
                         <Heading size={"3xl"}>{formatRupiah(100000)}</Heading>
                     </Flex>
                     <Box flex={"auto"} />
-                    <Button size={"xl"} onClick={() => navigate("/checkout")}>
+                    <Button w={{base: "full", md: "auto"}} size={"xl"} onClick={() => navigate("/checkout")}>
                         <FaBagShopping />
                         Proceed to Checkout
                     </Button>

@@ -65,8 +65,9 @@ const Navbar = () => {
 };
 
 const NavSearch = () => {
+    const navigate = useNavigate();
     return (
-        <InputGroup w={"full"} endElement={<FaSearch />} mx={3}>
+        <InputGroup w={"full"} endElement={<Box onClick={() => navigate("/search")}><FaSearch /></Box>} mx={3}>
             <Input placeholder={"Search product"} />
         </InputGroup>
     );

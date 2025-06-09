@@ -10,6 +10,7 @@ import RegisterPage from "@/pages/RegisterPage.tsx";
 import ResetPasswordPage from "@/pages/ResetPasswordPage.tsx";
 import ShipmentTrackingPage from "@/pages/ShipmentTrackingPage.tsx";
 import { createBrowserRouter } from "react-router";
+import SearchPage from "@/pages/SearchPage.tsx";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
                 path: "/checkout",
                 element: <CheckoutPage />,
             },
+            {
+                path: "/search",
+                element: <SearchPage/>,
+            }
         ],
     },
     {

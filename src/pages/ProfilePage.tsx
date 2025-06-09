@@ -23,10 +23,10 @@ const ProfilePage = () => {
     return (
         <>
             <Box h={"30px"} />
-            <Flex w={"full"} gap={6}>
+            <Flex direction={{base: "column", md: "row"}} w={"full"} gap={6}>
                 <Box
                     alignSelf={"flex-start"}
-                    w={"300px"}
+                    w={{base: "full", md: "300px"}}
                     borderWidth={"1px"}
                     borderColor={"gray.800"}
                     rounded={"lg"}
@@ -74,7 +74,7 @@ const ProfilePage = () => {
                     </Flex>
                 </Box>
 
-                <Box w={"210px"}>
+                <Box w={{base: "full", md: "210px"}} mx={"auto"}>
                     <Image
                         p={3}
                         src={
@@ -82,8 +82,9 @@ const ProfilePage = () => {
                         }
                         rounded={"full"}
                         aspectRatio={1}
-                        w={"full"}
+                        w={{base: "250px", md: "full"}}
                         mb={3}
+                        mx={"auto"}
                     />
                     <Button w={"full"} size={"sm"}>
                         <FaEdit /> Change Profile Picture

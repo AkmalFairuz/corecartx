@@ -24,14 +24,15 @@ const ProductPage = () => {
     return (
         <>
             <Box h={"30px"} />
-            <Flex flex={"auto"}>
+            <Flex flex={"auto"} direction={{base: "column", md: "row"}} gap={4}>
                 <Image
-                    h={"300px"}
+                    h={{base: "auto", md: "300px"}}
                     src={imageURL}
                     aspectRatio={1}
                     rounded={"sm"}
+                    mb={{base: 4, md: 0}}
                 />
-                <Flex direction={"column"} ml={4} flex={"auto"}>
+                <Flex direction={"column"} flex={"auto"}>
                     <Heading size={"2xl"}>
                         Intel Core i9-9900K Processor
                     </Heading>
@@ -56,8 +57,7 @@ const ProductPage = () => {
                 <Flex
                     direction={"column"}
                     alignSelf={"start"}
-                    ml={4}
-                    w={"300px"}
+                    w={{base: "full", md: "300px"}}
                     rounded={"lg"}
                     p={3}
                     borderWidth={"1px"}
@@ -129,8 +129,8 @@ const ProductPage = () => {
 const CustomerReviews = () => {
     return (
         <>
-            <Flex w={"full"} mt={8} gap={16}>
-                <Box w={"300px"}>
+            <Flex w={"full"} mt={8} gap={16} direction={{base: "column", md: "row"}}>
+                <Box w={{base: "full", md: "300px"}}>
                     <Heading size={"2xl"} mb={2}>
                         Customer Reviews
                     </Heading>
