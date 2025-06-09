@@ -1,7 +1,9 @@
 import XLink from "@/components/ui/xlink.tsx";
 import { Button, Field, Flex, Heading, Input, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router";
 
 const LoginPage = () => {
+    const navigate = useNavigate();
     return (
         <>
             <Heading size={"3xl"}>Login</Heading>
@@ -25,7 +27,7 @@ const LoginPage = () => {
                 <XLink href={"/reset-password"}>Forgot password?</XLink>
             </Flex>
 
-            <Button mt={2}>Login</Button>
+            <Button mt={2} onClick={() => navigate("/")}>Login</Button>
         </>
     );
 };

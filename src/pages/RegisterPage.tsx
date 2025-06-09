@@ -1,7 +1,9 @@
 import XLink from "@/components/ui/xlink.tsx";
 import { Button, Field, Heading, Input, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router";
 
 const RegisterPage = () => {
+    const navigate = useNavigate();
     return (
         <>
             <Heading size={"3xl"}>Register</Heading>
@@ -33,7 +35,7 @@ const RegisterPage = () => {
                 />
             </Field.Root>
 
-            <Button mt={4}>Register</Button>
+            <Button mt={4} onClick={() => navigate("/register-verification")}>Register</Button>
         </>
     );
 };

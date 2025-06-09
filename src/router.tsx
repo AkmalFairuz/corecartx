@@ -11,6 +11,7 @@ import ResetPasswordPage from "@/pages/ResetPasswordPage.tsx";
 import ShipmentTrackingPage from "@/pages/ShipmentTrackingPage.tsx";
 import { createBrowserRouter } from "react-router";
 import SearchPage from "@/pages/SearchPage.tsx";
+import RegisterVerificationPage from "@/pages/RegisterVerificationPage.tsx";
 
 const router = createBrowserRouter([
     {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
                 path: "/reset-password",
                 element: <ResetPasswordPage />,
             },
+            {
+                path: "/register-verification",
+                element: <RegisterVerificationPage/>
+            }
         ],
     },
 ]);
