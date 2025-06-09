@@ -1,9 +1,10 @@
-import { Box, Flex, Heading, Input, InputGroup, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Input, InputGroup, Text, useBreakpointValue } from "@chakra-ui/react";
 import { FaSearch, FaShoppingCart, FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router";
 
 const Navbar = () => {
     const navigate = useNavigate();
+    const title = useBreakpointValue({base: "CC", md: "CoreCart"});
     return (
         <>
             <Flex
@@ -23,7 +24,7 @@ const Navbar = () => {
                         mr={3}
                         onClick={() => navigate("/")}
                     >
-                        CoreCart
+                        {title}
                     </Heading>
                     <Flex
                         flex={"auto"}

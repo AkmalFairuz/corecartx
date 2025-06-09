@@ -30,7 +30,7 @@ const CheckoutPage = () => {
                 count={steps.length}
                 onStepChange={(s) => setStep(s.step)}
             >
-                <Steps.List>
+                <Steps.List display={{base: "none", md: "flex"}}>
                     {steps.map((step, index) => (
                         <Steps.Item
                             key={index}
